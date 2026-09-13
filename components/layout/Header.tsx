@@ -9,9 +9,11 @@ import { LangToggle } from './LangToggle'
 // import { AudienceToggle } from './AudienceToggle' // masqué pour l'instant
 
 const NAV_LINKS = [
-  { href: '/#domaines', fr: 'Domaines cliniques', en: 'Clinical Fields' },
+  { href: '/#domaines', fr: 'Spécialités', en: 'Specialties' },
   { href: '/#equipements', fr: 'Équipements', en: 'Equipment' },
-  { href: '/#services', fr: 'Nos services', en: 'Our Services' },
+  { href: '/#partenaires', fr: 'Partenaires', en: 'Partners' },
+  { href: '/#services', fr: 'Services', en: 'Services' },
+  { href: '/#presence', fr: 'Zones couvertes', en: 'Coverage' },
   { href: '/actualites', fr: 'Actualités', en: 'News' },
   { href: '/#societe', fr: 'La société', en: 'Company' },
 ]
@@ -36,7 +38,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-full max-w-6xl items-center gap-6 px-6">
-        <Link href="/#hero" className="flex shrink-0 items-center">
+        <Link href="/#home" className="flex shrink-0 items-center">
           <Image src="/img/logo.webp" alt="Medicaris SARL" width={96} height={60} priority className="h-13 w-auto" />
         </Link>
 

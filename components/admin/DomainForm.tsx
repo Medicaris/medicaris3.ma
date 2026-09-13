@@ -6,7 +6,7 @@ import slugify from 'slugify'
 import type { ClinicalDomain } from '@/lib/supabase/types'
 import { BilingualField } from './BilingualField'
 
-const ICON_OPTIONS = ['proctologie', 'phlebologie', 'urologie', 'ablation']
+const ICON_OPTIONS = ['proctologie', 'phlebologie', 'urologie', 'pain', 'ablation']
 
 interface DomainFormProps {
   domain?: ClinicalDomain

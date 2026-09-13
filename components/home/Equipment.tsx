@@ -8,6 +8,60 @@ import { useAudience } from '@/lib/audience/AudienceContext'
 import type { Equipment as EquipmentType } from '@/lib/supabase/types'
 import { Reveal } from '@/components/motion/Reveal'
 
+/**
+ * Remplace l'ancienne planche /img/equipements.webp, dont les légendes étaient
+ * incrustées en français et ne suivaient donc pas la langue choisie.
+ * Les photos sont désormais détourées une par une, les légendes sont du texte.
+ */
+const GALLERY = [
+  {
+    src: '/img/rf-curaway-cr-s2000.webp',
+    width: 566,
+    height: 386,
+    fr: 'Générateur de radiofréquence Curaway CR-S2000',
+    en: 'Curaway CR-S2000 radiofrequency generator',
+  },
+  {
+    src: '/img/rf-curaway-compact.webp',
+    width: 414,
+    height: 272,
+    fr: 'Générateur de radiofréquence compact Curaway',
+    en: 'Curaway compact radiofrequency generator',
+  },
+  {
+    src: '/img/laser-pioon-s1-pro.webp',
+    width: 556,
+    height: 500,
+    fr: 'Système laser Pioon S1 PRO',
+    en: 'Pioon S1 PRO laser system',
+  },
+]
+
+function EquipmentGallery() {
+  const t = useT()
+
+  return (
+    <div className="mt-14 grid gap-6 sm:grid-cols-3">
+      {GALLERY.map((shot) => (
+        <Reveal key={shot.src} className="overflow-hidden rounded-2xl border border-line bg-paper-alt">
+          <div className="flex h-44 items-center justify-center p-4">
+            <Image
+              src={shot.src}
+              alt={t(shot.fr, shot.en)}
+              width={shot.width}
+              height={shot.height}
+              className="max-h-full w-auto object-contain"
+            />
+          </div>
+          <div className="border-t border-line bg-paper px-5 py-4 text-sm font-medium leading-snug text-ink">
+            {t(shot.fr, shot.en)}
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  )
+}
+
 function EquipmentCard({ item }: { item: EquipmentType }) {
   const t = useT()
   const { audience } = useAudience()
@@ -73,7 +127,7 @@ export function Equipment({ equipment }: { equipment: EquipmentType[] }) {
   const t = useT()
 
   return (
-    <section id="equipements" className="bg-paper py-24">
+    <section id="equipements" className="bg-paper py-18">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-block rounded-full bg-navy/8 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-navy">
@@ -84,18 +138,13 @@ export function Equipment({ equipment }: { equipment: EquipmentType[] }) {
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted">
             {t(
-              'Chaque système est choisi pour sa fiabilité clinique. Distributeur exclusif au Maroc, Medicaris est votre seul contact, du devis au support technique.',
-              'Each system is selected for its clinical reliability. As the exclusive distributor in Morocco, Medicaris is your single point of contact, from quotation to technical support.'
+              'Chaque système est choisi pour sa fiabilité clinique. En relation directe avec les fabricants, Medicaris est votre seul contact, du devis au support technique.',
+              'Each system is selected for its clinical reliability. Working directly with manufacturers, Medicaris is your single point of contact, from quotation to technical support.'
             )}
           </p>
-          <Image
-            src="/img/equipements.webp"
-            alt={t('Équipements Medicaris', 'Medicaris equipment')}
-            width={896}
-            height={1195}
-            className="mx-auto mt-8 h-auto w-full max-w-md rounded-2xl"
-          />
         </Reveal>
+
+        <EquipmentGallery />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
           {equipment.map((item) => (

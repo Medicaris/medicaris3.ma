@@ -13,16 +13,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Radiofréquence et laser chirurgical au Maroc — Medicaris',
+  title: 'Équipements et dispositifs pour le bloc opératoire — Medicaris Maroc',
   description:
-    "Medicaris SARL, Casablanca — spécialiste de la radiofréquence et du laser en chirurgie par énergie au Maroc : hémorroïdes et fistule, varices par voie endoveineuse, hypertrophie prostatique, ablation de nodule thyroïdien. Importation directe, installation, formation, consommables.",
+    "Medicaris SARL, Casablanca — équipements et dispositifs pour le bloc opératoire au Maroc : proctologie, urologie, phlébologie, pain management, ablation tissulaire. Plateformes laser et générateurs de radiofréquence, en relation directe avec les fabricants. Installation, formation, consommables.",
   alternates: { canonical: '/' },
   openGraph: {
     siteName: 'Medicaris SARL',
     locale: 'fr_MA',
-    title: 'Radiofréquence et laser chirurgical au Maroc — Medicaris',
+    title: 'Équipements et dispositifs pour le bloc opératoire — Medicaris Maroc',
     description:
-      'Spécialiste de la radiofréquence et du laser en chirurgie par énergie : proctologie, phlébologie, urologie, ablation tissulaire. Casablanca, Maroc.',
+      'Proctologie, urologie, phlébologie, pain management, ablation tissulaire. Plateformes laser et générateurs de radiofréquence. Casablanca, Maroc.',
     type: 'website',
     url: '/',
     images: ['/img/logo.webp'],
@@ -38,7 +38,7 @@ const jsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/img/logo.webp`,
   description:
-    'Spécialiste de la radiofréquence et du laser en chirurgie par énergie au Maroc. Distribution de générateurs de radiofréquence et de plateformes laser pour la proctologie, la phlébologie, l’urologie et l’ablation tissulaire.',
+    'Distribution d’équipements et de dispositifs pour le bloc opératoire au Maroc : proctologie, urologie, phlébologie, pain management, ablation tissulaire. Plateformes laser et générateurs de radiofréquence, en relation directe avec les fabricants.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Rue Soumaya, Résidence Shehrazade 3, 5e étage, N° 22, Palmiers',

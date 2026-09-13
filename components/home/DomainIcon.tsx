@@ -24,6 +24,13 @@ const ICONS: Record<string, React.ReactNode> = {
       <circle cx="12" cy="19.5" r="1.6" />
     </>
   ),
+  pain: (
+    <>
+      <path d="M4.5 4c0 4 4 4 4 8s-4 4-4 8" strokeLinecap="round" />
+      <circle cx="14.8" cy="12" r="2.2" />
+      <path d="M19 12h2.2M17.7 9.2l1.6-1.6M17.7 14.8l1.6 1.6" strokeLinecap="round" />
+    </>
+  ),
   ablation: (
     <>
       <path d="M4 20L14 10" strokeLinecap="round" />

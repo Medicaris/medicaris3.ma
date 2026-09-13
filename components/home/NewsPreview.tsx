@@ -14,7 +14,7 @@ export function NewsPreview({ articles }: { articles: ArticleMeta[] }) {
   if (articles.length === 0) return null
 
   return (
-    <section id="actualites-apercu" className="bg-paper py-24">
+    <section id="actualites-apercu" className="bg-paper py-18">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-block rounded-full bg-navy/8 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-navy">

@@ -1,6 +1,7 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { WhatsAppButton } from '@/components/shared/WhatsAppButton'
+import { PreviewBadge } from '@/components/shared/PreviewBadge'
 
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
       <main className="flex-1 pt-[68px]">{children}</main>
       <Footer />
       <WhatsAppButton />
+      <PreviewBadge />
     </>
   )
 }

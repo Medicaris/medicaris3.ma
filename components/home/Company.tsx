@@ -29,7 +29,7 @@ export function Company() {
   const t = useT()
 
   return (
-    <section id="societe" className="bg-paper-alt py-24">
+    <section id="societe" className="bg-paper-alt py-18">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <span className="inline-block rounded-full bg-navy/8 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-navy">

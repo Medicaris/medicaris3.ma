@@ -9,7 +9,7 @@ export function Services({ services }: { services: Service[] }) {
   const t = useT()
 
   return (
-    <section id="services" className="bg-paper-alt py-24">
+    <section id="services" className="border-t border-line bg-paper-alt py-18">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-block rounded-full bg-navy/8 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-navy">

@@ -17,8 +17,6 @@ export const metadata: Metadata = {
   description:
     "Medicaris SARL, Casablanca — équipements et dispositifs pour le bloc opératoire au Maroc : proctologie, urologie, phlébologie, pain management, ablation tissulaire. Plateformes laser et générateurs de radiofréquence, en relation directe avec les fabricants. Installation, formation, consommables.",
   alternates: { canonical: '/' },
-  // PRÉVERSION : jamais indexée. À retirer au moment de la bascule en production.
-  robots: { index: false, follow: false, nocache: true },
   openGraph: {
     siteName: 'Medicaris SARL',
     locale: 'fr_MA',

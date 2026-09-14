@@ -10,4 +10,4 @@
  * Au moment de la bascule en production : passer à false, retirer le bloc
  * `robots` de la metadata dans app/layout.tsx, puis vérifier /robots.txt.
  */
-export const IS_PREVIEW = true
+export const IS_PREVIEW = false

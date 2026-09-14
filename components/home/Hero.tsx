@@ -19,10 +19,10 @@ export function Hero() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="home" className="relative flex min-h-[80dvh] items-center overflow-hidden border-b border-paper/10 text-paper sm:min-h-[92vh]">
+    <section id="home" className="relative flex min-h-[80dvh] items-center overflow-hidden border-b border-paper/10 text-paper sm:min-h-[calc(100dvh-68px)]">
       <HeroBackground />
 
-      <div className="relative z-2 mx-auto max-w-6xl px-6 py-7 sm:py-16">
+      <div className="relative z-2 mx-auto max-w-6xl px-6 py-7 sm:py-10">
         <motion.h1
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export function Hero() {
           <em className="text-rf not-italic">{t('des patients debout plus vite.', 'patients back on their feet faster.')}</em>
         </motion.h1>
 
-        <div className="mt-6 sm:mt-8 lg:flex lg:items-center lg:gap-8">
+        <div className="mt-6 lg:flex lg:items-center lg:gap-8">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 20 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: MOTION.duration.slow, delay: 0.2, ease: MOTION.ease }}
-          className="mt-7 flex flex-nowrap gap-2.5 sm:mt-9 sm:gap-4"
+          className="mt-7 flex flex-nowrap gap-2.5 sm:mt-6 sm:gap-4"
         >
           <a
             href="#contact"
@@ -98,7 +98,7 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: MOTION.duration.slow, delay: 0.3, ease: MOTION.ease }}
-          className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-paper/10 pt-5 sm:mt-16 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-5 sm:pt-8"
+          className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-paper/10 pt-5 sm:mt-8 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-5 sm:pt-6"
         >
           {TRUST_ITEMS.map((item) => (
             <div key={item.fr} className="flex items-start gap-2 text-[0.78rem] text-paper/70 sm:gap-2.5 sm:text-sm">

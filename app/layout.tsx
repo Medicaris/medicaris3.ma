@@ -45,7 +45,7 @@ const jsonLd = {
     addressLocality: 'Casablanca',
     addressCountry: 'MA',
   },
-  telephone: '+212661330704',
+  telephone: '+212669182123',
   areaServed: { '@type': 'Country', name: 'Maroc' },
   identifier: [
     { '@type': 'PropertyValue', name: 'ICE', value: '003701741000047' },
@@ -55,7 +55,7 @@ const jsonLd = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
-    telephone: '+212661330704',
+    telephone: '+212669182123',
     areaServed: 'MA',
     availableLanguage: ['fr', 'en', 'ar'],
   },

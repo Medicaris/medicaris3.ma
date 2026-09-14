@@ -1,9 +1,9 @@
 export const SITE_URL = 'https://medicaris.ma'
 
 export const CONTACT = {
-  phone: '+212661330704',
-  phoneDisplay: '+212 661 33 07 04',
-  whatsappNumber: '212664130118',
+  phone: '+212669182123',
+  phoneDisplay: '+212 669 18 21 23',
+  whatsappNumber: '212669182123',
   addressFr: 'Rue Soumaya, Rés. Shehrazade 3, 5ᵉ ét., N° 22 — Palmiers, Casablanca',
   addressEn: 'Rue Soumaya, Res. Shehrazade 3, 5th fl., No. 22 — Palmiers, Casablanca',
 }

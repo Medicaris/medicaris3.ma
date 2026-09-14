@@ -31,6 +31,10 @@ export async function proxy(request: NextRequest) {
     }
   )
 
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
   const pathname = request.nextUrl.pathname
   const isAdminRoute = pathname.startsWith('/admin')
   const isMaintenancePage = pathname === '/maintenance'
@@ -38,9 +42,6 @@ export async function proxy(request: NextRequest) {
   // Routes admin : toujours accessibles (auth uniquement) — sinon personne ne
   // peut désactiver la veille une fois activée.
   if (isAdminRoute) {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser()
     const isLoginPage = pathname === '/admin/login'
 
     if (!isLoginPage && !user) {
@@ -70,7 +71,9 @@ export async function proxy(request: NextRequest) {
     return supabaseResponse
   }
 
-  if (maintenanceActive) {
+  // Un administrateur connecté voit le site normalement même en veille, pour
+  // pouvoir vérifier son rendu avant de désactiver la maintenance.
+  if (maintenanceActive && !user) {
     const url = request.nextUrl.clone()
     url.pathname = '/maintenance'
     return NextResponse.redirect(url)

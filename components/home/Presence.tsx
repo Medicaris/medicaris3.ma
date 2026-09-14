@@ -29,7 +29,7 @@ export function Presence() {
           <span className="inline-block rounded-full bg-navy/8 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-navy">
             {t('Zones couvertes', 'Coverage')}
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-ink sm:text-4xl">
             {t('Où intervenons-nous ?', 'Where do we operate?')}
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted">
